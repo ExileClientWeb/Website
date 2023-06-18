@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -76,6 +75,24 @@
     .navbar ul li a {
       display: block;
       padding: 10px 14px;
+      position: relative; /* Add this line */
+    }
+
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: hsl(189, 48%, 56%); /* Specify the desired color */
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar ul li a:hover::after,
+    .navbar ul li a.active::after {
+      transform: scaleX(1);
     }
 
     .content {
@@ -128,50 +145,9 @@
       0% {
         opacity: 0;
       }
+
       100% {
         opacity: 1;
-      }
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      .navbar ul {
-        display: none;
-      }
-
-      .navbar ul.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: hsl(0, 0%, 10%);
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding-top: 20px;
-      }
-
-      .navbar-toggle {
-        display: block;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-
-      .navbar-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin-bottom: 5px;
-        background-color: #FFF;
-        transition: background-color 0.3s;
-      }
-
-      .navbar-menu {
-        display: none;
-      }
-
-      .navbar-menu.active {
-        display: block;
       }
     }
   </style>
@@ -183,13 +159,8 @@
         <img src="images/ExileLogo.png" class="logo" alt="Exile logo">
         <span class="logo-text">Exile Client</span>
       </a>
-      <div class="navbar-toggle" onclick="toggleNavbarMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="navbar-menu">
-        <li><a href="/home">Home</a></li>
+      <ul>
+        <li><a href="/home" class="active">Home</a></li>
         <li><a href="https://discord.exileclient.com">Discord</a></li>
         <li><a href="/store">Store</a></li>
       </ul>
@@ -200,14 +171,7 @@
     <h1 class="comingsoon-text">Coming Soon...</h1>
   </div>
   <footer>
-    <p>&copy; 2023 Always Virtues. All rights reserved.</p>
+    <a href="https://discord.gg/kpk6z2bV" class="button">2023 Always Virtues. All rights reserved.</a>
   </footer>
-
-  <script>
-    function toggleNavbarMenu() {
-      const navbarMenu = document.querySelector('.navbar-menu');
-      navbarMenu.classList.toggle('active');
-    }
-  </script>
 </body>
 </html>
