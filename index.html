@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+<html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <title>Exile Client</title>
   <link href="images/exilefavicon.ico" rel="icon">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -69,41 +70,47 @@
       display: flex;
       margin: 0;
       padding: 0;
+    }
+
+    .navbar ul li {
       list-style: none;
     }
 
     .navbar ul li a {
       display: block;
       padding: 10px 14px;
-    }
-
-    .navbar ul li a:hover {
-      color: hsl(189, 48%, 56%);
-    }
-
-    .footer-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      background-color: hsl(189, 48%, 56%);;
+      position: relative;
       color: #FFF;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 10px 16px;
-      border-radius: 20px;
-      transition: background-color 0.3s;
     }
 
-    .footer-button:hover {
-      background-color: rgb(57, 189, 189);
+    .navbar ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background-color: transparent;
+      transition: width 0.3s ease;
     }
 
-    .footer-button svg {
-      height: 12px;
-      width: 12px;
-      margin-right: 4px;
+    .navbar ul li a:hover::after {
+      width: 100%;
+      background-color: hsl(189, 48%, 56%);
+    }
+
+    .navbar ul.show {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar li {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .navbar-toggler {
+      display: none;
     }
 
     .content {
@@ -127,12 +134,36 @@
       color: #fff;
     }
 
+    .footer-button {
+      display: inline-block;
+      background-color: cyan;
+      color: white;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+
+    .footer-button:hover {
+      background-color: #00BFFF;
+    }
+
     .feature-text {
       position: absolute;
       top: 10vh;
       font-size: 64px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       color: #FFF;
+      opacity: 0;
+      animation: fade-in-animation 2s forwards;
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fade-in-animation 2s forwards;
     }
 
     .comingsoon-text {
@@ -147,9 +178,41 @@
       animation: fade-in-animation 2s forwards;
     }
 
-    .fade-in {
-      opacity: 0;
-      animation: fade-in-animation 2s forwards;
+    @media only screen and (max-width: 768px) {
+      .navbar ul {
+        display: none;
+      }
+
+      .navbar ul.show {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar li {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .navbar-toggler {
+        display: block;
+        background-color: hsl(189, 48%, 56%);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .navbar-toggler span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 5px;
+        background-color: #fff;
+      }
+
+      .navbar-toggler span:last-child {
+        margin-bottom: 0;
+      }
     }
 
     @keyframes fade-in-animation {
@@ -170,21 +233,30 @@
         <img src="images/ExileLogo.png" class="logo" alt="Exile logo">
         <span class="logo-text">Exile Client</span>
       </a>
-      <ul>
-        <li><a href="/home">Home</a></li>
-        <li><a href="https://discord.exileclient.com">Discord</a></li>
-        <li><a href="/store">Store</a></li>
+      <button class="navbar-toggler" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="/home" class="navbar-link">Home</a></li>
+        <li><a href="https://discord.exileclient.com" class="navbar-link">Discord</a></li>
+        <li><a href="/store" class="navbar-link">Store</a></li>
       </ul>
     </div>
   </nav>
   <div class="content">
-    <div class="fade-in"></div>
-    <h1 class="comingsoon-text">Coming Soon...</h1>
+    <h1 class="comingsoon-text fade-in">Coming Soon...</h1>
   </div>
   <footer>
-    <button class="footer-button" onclick="window.location.href='https://discord.gg/kpk6z2bV'">
-      ©️ 2023 Always Virtues. All rights reserved.
-    </button>
+    <a href="https://discord.gg/kpk6z2bV" class="footer-button">© 2023 Always Virtues. All rights reserved</a>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("navbarMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
