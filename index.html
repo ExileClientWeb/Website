@@ -3,27 +3,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <title>Exile Client</title>
-  <link href="favicon.ico" rel="icon">
+  <link href="images/favicon.ico" rel="icon">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
 
 * {
-  box-sizing: border-box;
-}
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-header {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
+    body::-webkit-scrollbar {
+      width: 0.5em;
+      background-color: #F5F5F5;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: #000000;
+    }
+
+    header {
+      overflow: auto;
+    }
 
 nav {
   background: hsl(0, 0%, 10%);
