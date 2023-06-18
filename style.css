@@ -81,13 +81,6 @@ footer {
   background-color: hsl(0, 0%, 10%);
   color: #fff;
 }
-    .feature-text {
-      position: absolute;
-      top: 10vh;
-      font-size: 64px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      color: #FFF;
-    }
 
 .comingsoon-text {
   position: absolute;
