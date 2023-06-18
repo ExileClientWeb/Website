@@ -75,24 +75,35 @@
     .navbar ul li a {
       display: block;
       padding: 10px 14px;
-      position: relative; /* Add this line */
     }
 
-    .navbar ul li a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: hsl(189, 48%, 56%); /* Specify the desired color */
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
+    .navbar ul li a:hover {
+      color: hsl(189, 48%, 56%);
     }
 
-    .navbar ul li a:hover::after,
-    .navbar ul li a.active::after {
-      transform: scaleX(1);
+    .footer-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: hsl(189, 48%, 56%);;
+      color: #FFF;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .footer-button:hover {
+      background-color: rgb(57, 189, 189);
+    }
+
+    .footer-button svg {
+      height: 12px;
+      width: 12px;
+      margin-right: 4px;
     }
 
     .content {
@@ -160,7 +171,7 @@
         <span class="logo-text">Exile Client</span>
       </a>
       <ul>
-        <li><a href="/home" class="active">Home</a></li>
+        <li><a href="/home">Home</a></li>
         <li><a href="https://discord.exileclient.com">Discord</a></li>
         <li><a href="/store">Store</a></li>
       </ul>
@@ -171,7 +182,9 @@
     <h1 class="comingsoon-text">Coming Soon...</h1>
   </div>
   <footer>
-    <a href="https://discord.gg/kpk6z2bV" class="button">2023 Always Virtues. All rights reserved.</a>
+    <button class="footer-button" onclick="window.location.href='https://discord.gg/kpk6z2bV'">
+      ©️ 2023 Always Virtues. All rights reserved.
+    </button>
   </footer>
 </body>
 </html>
