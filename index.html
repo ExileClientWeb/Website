@@ -1,261 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
-<title>Exile Client</title>
-<link href="/images/exilefavicon.ico" rel="icon">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    body::-webkit-scrollbar {
-      width: 0.5em;
-      background-color: #F5F5F5;
-    }
-
-    body::-webkit-scrollbar-thumb {
-      background-color: #000000;
-    }
-
-    header {
-      overflow: auto;
-    }
-
-    nav {
-      background: hsl(0, 0%, 10%);
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo {
-      width: 50px;
-      margin-right: 10px;
-    }
-
-    .logo-text {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      color: #FFF;
-      align-items: center;
-      width: min(1800px, calc(100% - 50px));
-      margin-inline: auto;
-      padding: 10px;
-    }
-
-    .navbar a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .navbar ul {
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar ul li {
-      list-style: none;
-    }
-
-    .navbar ul li a {
-      display: block;
-      padding: 10px 14px;
-      position: relative;
-      color: #FFF;
-    }
-
-    .navbar ul li a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0;
-      height: 2px;
-      background-color: transparent;
-      transition: width 0.3s ease;
-    }
-
-    .navbar ul li a:hover::after {
-      width: 100%;
-      background-color: hsl(191, 100%, 50%);
-    }
-
-    .navbar ul.show {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .navbar li {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .navbar-toggler {
-      display: none;
-    }
-
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url(/images/wallpaper.jpg) center / cover no-repeat;
-      min-height: 100vh;
-    }
-
-    section {
-      background: hsl(0, 0%, 75%);
-      padding: 20px;
-      border-radius: 15px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: hsl(0, 0%, 10%);
-      color: #fff;
-    }
-
-    .footer-button {
-      display: inline-block;
-      background-color: cyan;
-      color: hsl(0, 0%, 10%);
-      padding: 10px 20px;
-      font-size: 14px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-    }
-
-    .footer-button:hover {
-      background-color: #00BFFF;
-    }
-
-    .feature-text {
-      position: absolute;
-      top: 10vh;
-      font-size: 64px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      color: #FFF;
-      opacity: 0;
-      animation: fade-in-animation 2s forwards;
-    }
-
-    .fade-in {
-      opacity: 0;
-      animation: fade-in-animation 2s forwards;
-    }
-
-    .comingsoon-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 64px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      color: #FFF;
-      opacity: 0;
-      animation: fade-in-animation 2s forwards;
-    }
-
-    @media only screen and (max-width: 768px) {
-      .navbar ul {
-        display: none;
-      }
-
-      .navbar ul.show {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .navbar li {
-        text-align: center;
-        margin-top: 10px;
-      }
-
-      .navbar-toggler {
-        display: block;
-        background-color: hsl(189, 48%, 56%);
-        color: #fff;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-      }
-
-      .navbar-toggler span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin-bottom: 5px;
-        background-color: #fff;
-      }
-
-      .navbar-toggler span:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    @keyframes fade-in-animation {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-  </style>
+<html lang="en">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exile Client</title>
+  <link rel="icon" href="./images/exilefavicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <link rel="stylesheet" href="./resources/css/style.css">
 </head>
 <body>
-<nav>
-<div class="navbar">
-<a href="#" class="navbar-brand">
-<img src="/images/ExileLogo.png" class="logo" alt="Exile logo">
-<span class="logo-text">Exile Client</span>
-</a>
-<button class="navbar-toggler" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
-</button>
-<ul class="navbar-menu" id="navbarMenu">
-<li><a href="/home" class="navbar-link">Home</a></li>
-<li><a href="https://discord.exileclient.com" class="navbar-link">Discord</a></li>
-<li><a href="/store" class="navbar-link">Store</a></li>
-</ul>
-</div>
-</nav>
-<div class="content">
-<h1 class="comingsoon-text fade-in">Coming Soon...</h1>
-</div>
-<footer>
-<a href="https://discord.gg/kpk6z2bV" class="footer-button">© 2023 Always Virtues. All rights reserved</a>
-</footer>
-<script>
-    function toggleMenu() {
-      var menu = document.getElementById("navbarMenu");
-      menu.classList.toggle("show");
-    }
-  </script>
+<header>
+    <nav>
+      <div class="navbar">
+        <a href="#" class="navbar-brand">
+          <img src="./images/ExileLogo.png" class="logo" alt="Exile logo">
+          <span class="logo-text">Exile Client</span>
+        </a>
+        <button class="navbar-toggler" onclick="toggleMenu()"></button>
+        <ul class="navbar-menu" id="navbarMenu">
+          <li><a href="/home" class="navbar-link">Home</a></li>
+          <li><a href="https://discord.exileclient.com" class="navbar-link">Discord</a></li>
+          <li><a href="/store" class="navbar-link">Store</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <h1 class="comingsoon-text fade-in">Coming Soon...</h1>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://discord.gg/kpk6z2bV" class="footer-button">© 2023 Always Virtues. All rights reserved</a>
+  </footer>
+
+  <script src="./resources/js/script.js" defer></script>
 </body>
 </html>
