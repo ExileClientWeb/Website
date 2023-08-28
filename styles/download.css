@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/assets/background.jpg') center / cover no-repeat;
+    min-height: 100vh;
+}
+
+.download-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: hsl(0, 0%, 10%); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #00BFFF;
+}
+
+
+.download-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.download-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: white
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #00BFFF;
+    color: #000000;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.download-button:hover {
+    background-color: #0092d6;
+}
+
+nav {
+    background: hsl(0, 0%, 10%);
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    align-items: center;
+    width: min(1800px, calc(100% - 50px));
+    margin-inline: auto;
+    padding: 10px;
+  }
+
+  .navbar a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    list-style: none;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 10px 14px;
+    position: relative;
+    color: #FFF;
+  }
+
+  .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease;
+  }
+
+  .navbar ul li a:hover::after {
+    width: 100%;
+    background-color: hsl(191, 100%, 50%);
+  }
+
+  .navbar ul.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar li {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: hsl(0, 0%, 10%);
+    color: #fff;
+    margin-top: auto; /* Push footer to the bottom */
+  }
+
+.footer-button {
+  display: inline-block;
+  background-color: cyan;
+  color: hsl(0, 0%, 10%);
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+  .footer-button:hover {
+    background-color: #00BFFF;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .navbar ul {
+      display: none;
+    }
+
+    .navbar ul.show {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar li {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .navbar-toggler {
+      display: block;
+      background-color: hsl(189, 48%, 56%);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .navbar-toggler span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin-bottom: 5px;
+      background-color: #fff;
+    }
+
+    .navbar-toggler span:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @keyframes fade-in-animation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
