@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exile Client</title>
-  <link rel="icon" href="./images/exilefavicon.ico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-  <link rel="stylesheet" href="/resources/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Exile Client</title>
+<link href="/assets/exilefavicon.ico" rel="icon">
+<link rel="stylesheet" href="styles/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
     <nav>
-      <div class="navbar">
-        <a href="#" class="navbar-brand">
-          <img src="./images/ExileLogo.png" class="logo" alt="Exile logo">
-          <span class="logo-text">Exile Client</span>
-        </a>
-        <button class="navbar-toggler" onclick="toggleMenu()"></button>
-        <ul class="navbar-menu" id="navbarMenu">
-          <li><a href="/home" class="navbar-link">Home</a></li>
-          <li><a href="https://discord.exileclient.com" class="navbar-link">Discord</a></li>
-          <li><a href="/store" class="navbar-link">Store</a></li>
-        </ul>
-      </div>
+        <div class="navbar">
+            <a href="#" class="navbar-brand">
+                <img src="/assets/ExileLogo.png" class="logo" alt="Exile logo">
+                <span class="logo-text">Exile Client</span>
+            </a>
+            <button class="navbar-toggler" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="/index.html" class="navbar-link">Home</a></li>
+                <li><a href="/download.html" class="navbar-link">Download</a></li>
+                <li><a href="/staff.html" class="navbar-link">Staff</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
-
-  <main>
-    <section class="content">
-      <h1 class="comingsoon-text fade-in">Coming Soon...</h1>
-    </section>
-  </main>
-
-  <footer>
-    <a href="https://discord.gg/kpk6z2bV" class="footer-button">© 2023 Always Virtues. All rights reserved</a>
-  </footer>
-
-  <script src="/resources/js/script.js"></script>
+    <div class="content">
+        <h1 class="feature-text fade-in">Exile Client</h1>
+        <p class="description">Enhance your Minecraft PvP experience with Exile Client. Uncover powerful tools and features designed to help you conquer the competition. Elevate your gameplay with Exile Client and become a PvP master.</p>
+    </div>
+    <footer>
+        <a href="https://twitter.com/@torqinlive" class="footer-button">© 2023 Always Virtues. All rights reserved</a>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navbarMenu");
+            menu.classList.toggle("show");
+        }
+    </script>
+    <script>(function(){var js = "window['__CF$cv$params']={r:'7fd86395e8fe476c',t:'MTY5MzE4MjAzMi4zNzYwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script>
 </body>
 </html>

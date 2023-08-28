@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff</title>
+    <link rel="stylesheet" href="styles/staff.css">
+    <link href="/assets/exilefavicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#" class="navbar-brand">
+                <img src="/assets/ExileLogo.png" class="logo" alt="Exile logo">
+                <span class="logo-text">Exile Client</span>
+            </a>
+            <button class="navbar-toggler" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="/index.html" class="navbar-link">Home</a></li>
+                <li><a href="/download.html" class="navbar-link">Download</a></li>
+                <li><a href="/staff.html" class="navbar-link">Staff</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="roster">
+      <div class="player owner">
+          <div class="rank">Owner</div>
+          <div class="name">Savrien</div>
+      </div>
+      <div class="player manager">
+          <div class="rank">Manager</div>
+          <div class="name">Lcbby</div>
+      </div>
+      <div class="player manager">
+          <div class="rank">Manager</div>
+          <div class="name">Yawfi</div>
+      </div>
+      <div class="player sr-admin">
+          <div class="rank">Sr Admin</div>
+          <div class="name">Ethnzz</div>
+      </div>
+      <div class="player sr-admin">
+          <div class="rank">Sr Admin</div>
+          <div class="name">Technobladev3</div>
+      </div>
+      <div class="player admin">
+          <div class="rank">Admin</div>
+          <div class="name">1v27</div>
+      </div>
+      <div class="player helper">
+          <div class="rank">Helper</div>
+          <div class="name">McDonaldSeal</div>
+      </div>
+      <div class="player mod">
+          <div class="rank">Mod</div>
+          <div class="name">Freefight</div>
+      </div>
+      <div class="player mod">
+          <div class="rank">Mod</div>
+          <div class="name">Slandun</div>
+      </div>
+  </div>
+    
+    <footer>
+        <a href="https://twitter.com/torqinlive" class="footer-button">© 2023 Always Virtues. All rights reserved</a>
+    </footer>
+    
+    <script>
+      function toggleMenu() {
+          var menu = document.getElementById("navbarMenu");
+          menu.classList.toggle("show");
+      }
+  </script>
+</body>
+</html>

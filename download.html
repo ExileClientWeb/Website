@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Exile Client</title>
+    <link rel="stylesheet" href="styles/download.css">
+    <link href="/assets/exilefavicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#" class="navbar-brand">
+                <img src="/assets/ExileLogo.png" class="logo" alt="Exile logo">
+                <span class="logo-text">Exile Client</span>
+            </a>
+            <button class="navbar-toggler" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="/index.html" class="navbar-link">Home</a></li>
+                <li><a href="/download.html" class="navbar-link">Download</a></li>
+                <li><a href="/staff.html" class="navbar-link">Staff</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <section class="download-section">
+            <h1 class="download-header">Download Exile Client</h1>
+            <p class="download-text">Experience the power of Exile Client. Click the button below to get started.</p>
+            <a href="/downloads/exile-client-latest.zip" class="download-button">Download Now</a>
+        </section>
+    </div>
+    
+    <footer>
+        <a href="https://twitter.com/torqinlive" class="footer-button">© 2023 Always Virtues. All rights reserved</a>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navbarMenu");
+            menu.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
